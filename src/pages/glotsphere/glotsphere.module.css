@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+  padding: 10px 40px;
+  font-size: 16px;
+  background-color: #007bff;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.qrContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.or {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.castSection {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.userInfo {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.castContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+  position: relative;
+  /* background-color: red; */
+}
+
+.castContainer:focus {
+  outline: none;
+  border: none;
+}
+.textAreaContainer {
+  width: 100%;
+  position: relative;
+}
+
+.castTextarea {
+  border: 1px solid white;
+  border-radius: 8px;
+  width: 100%;
+  padding-left: 6px;
+  padding-right: 10px;
+  background-color: black;
+  position: relative;
+}
+.castLength {
+  position: absolute;
+  bottom: 10px; /* Adjust based on your UI needs */
+  right: 10px; /* Adjust based on your UI needs */
+  color: #999; /* Example color */
+  background-color: transparent; /* Ensures no background interference */
+}
+
+.profilePic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.languagesContainer {
+  border: 1px solid white;
+  padding: 12px;
+  /* margin-top: 20px; */
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.btnContainer {
+  margin-top: 24px;
+}
+
+.defaultLanguage {
+  font-size: 12px;
+}

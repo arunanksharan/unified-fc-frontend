@@ -1,0 +1,30 @@
+@keyframes roll {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes split {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+  }
+}
+
+.animation-container .rolling-ball {
+  position: relative;
+  animation: roll 3s infinite;
+}
+
+.split-balls {
+  position: relative;
+  animation: split 1s forwards;
+}
