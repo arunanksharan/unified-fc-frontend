@@ -39,7 +39,7 @@ export default function GlotspherePage() {
     null
   );
   const [isCasting, setIsCasting] = useState<boolean>(false);
-  const [text, setText] = useState<string>('Hola!');
+  const [text, setText] = useState<string>('');
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [noUserExists, setNoUserExists] = useState<boolean>(false);
 
@@ -67,18 +67,15 @@ export default function GlotspherePage() {
 
   const handleCreateCast = async () => {
     setIsCasting(true);
-    const castText = text.length === 0 ? 'gm' : text;
+    // const castText = text;
     // Encode the array of selected languages into a query string
     try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/glotsphere/cast`,
-        {
-          text: castText,
-          languages: selectedLanguages,
-          signer_uuid: farcasterUser?.signer_uuid,
-        }
-      );
-      if (response.status === 200) {
+      const response = await axios.post(`/api/glotsphere/cast`, {
+        text: text,
+        languages: selectedLanguages,
+        signer_uuid: farcasterUser?.signer_uuid,
+      });
+      if (response.status === 201) {
         setText(''); // Clear the text field
         alert('Cast successful');
       }
@@ -349,7 +346,7 @@ export default function GlotspherePage() {
                   className={
                     'border border-gsElectricBlue rounded-lg w-full px-2 bg-black relative flex-1'
                   }
-                  placeholder="What's on your mind?"
+                  placeholder="gm! Have you casted today?"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   rows={5}

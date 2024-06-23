@@ -4,6 +4,7 @@ import Showcast from './Showcast';
 import { GetStaticProps } from 'next';
 import TestFCAuth from './TestFCAuth';
 import GlotsphereGrid from './GlotsphereGrid';
+import Overlay from '@/components/atoms/wip/WIP';
 
 export default function LandingPage() {
   return (
@@ -13,8 +14,10 @@ export default function LandingPage() {
 
       <Hero />
       <GlotsphereGrid />
-      <Glotsphere />
-      <Showcast />
+
+      <Overlay isWip={true}>
+        <Showcast />
+      </Overlay>
     </>
   );
 }

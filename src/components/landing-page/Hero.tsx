@@ -42,9 +42,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-w-full min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ">
+    <div className="bg-lphero relative min-w-full min-h-screen flex flex-col items-center justify-center p-4 md:p-8 ">
       <Spline
-        className="absolute w-full h-full"
+        className="absolute w-full h-full opacity-70"
         scene="https://prod.spline.design/AHdTLBTO6jQVwZVB/scene.splinecode"
       />
 
@@ -74,10 +74,10 @@ const Hero = () => {
         {status === 'authenticated'}
       </div>
 
-      <div className="relative bottom-10 inline-flex font-urbanist text-white text-6xl sm:text-8xl md:text-9xl lg:text-[144px] xl:text-[144px] font-bold">
+      <div className="relative bottom-10 inline-flex font-urbanist text-white text-center text-6xl sm:text-8xl md:text-9xl lg:text-[144px] xl:text-[144px] font-bold">
         farcaster labs
       </div>
-      <div className="relative inline-flex font-urbanist text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold ">
+      <div className="relative inline-flex font-urbanist text-white text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold ">
         {/* <div className="z-10 text-center font-urbanist text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold"> */}
         one platform to rule them all
       </div>
@@ -87,7 +87,6 @@ const Hero = () => {
             className="relative sm:text-xl md:text-xl lg:text-xl text-black font-urbanist font-bold w-full"
             onClick={handleContactClick}
           >
-            {/* <button className="z-10 text-base md:text-lg lg:text-xl text-black font-bold mt-8 md:mt-16 lg:mt-32"> */}
             <div className="absolute inset-x-0 h-full -bottom-1 bg-gray-200 rounded-2xl"></div>
 
             <div className="relative bg-gray-100 border border-gray-100 rounded-2xl py-2 px-10 sm:py-3 sm:px-20 md:py-3 md:px-20 lg:py-3 lg:px-20 transition transform duration-200 active:translate-y-1">
