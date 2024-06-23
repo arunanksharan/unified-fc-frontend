@@ -71,7 +71,7 @@ const Hero = () => {
             bgColorHover="showcastNavbarHover"
           />
         )}
-        {status === 'authenticated'}
+        {/* {status === 'authenticated'} */}
       </div>
 
       <div className="relative bottom-10 inline-flex font-urbanist text-white text-center text-6xl sm:text-8xl md:text-9xl lg:text-[144px] xl:text-[144px] font-bold">

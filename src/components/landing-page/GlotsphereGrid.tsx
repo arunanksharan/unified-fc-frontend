@@ -12,7 +12,7 @@ const GlotsphereGrid = () => {
     router.push('/glotsphere');
   };
   return (
-    <div className="bg-gshero bg-cover min-w-full min-h-screen">
+    <div className="bg-gshero bg-cover min-w-full min-h-screen border-y-2">
       <div className="min-w-full min-h-screen bg-black bg-opacity-70 flex flex-col items-center justify-center">
         {/** Unauth 1: Sign In With Farcaster */}
 

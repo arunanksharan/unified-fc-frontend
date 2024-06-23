@@ -11,7 +11,7 @@ export default function Showcast() {
   };
   return (
     <>
-      <div className="relative min-w-full min-h-screen flex flex-col items-center justify-center m-0 p-0">
+      <div className="relative min-w-full min-h-screen flex flex-col items-center justify-center m-0 p-0 border-b-2">
         <Image
           src="/hero/Group 9.svg"
           layout="fill"

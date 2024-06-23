@@ -4,6 +4,7 @@ import Showcast from './Showcast';
 import { GetStaticProps } from 'next';
 import GlotsphereGrid from './GlotsphereGrid';
 import Overlay from '@/components/atoms/wip/WIP';
+import BasedBuilders from './BasedBuilders';
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <Overlay isWip={true}>
         <Showcast />
       </Overlay>
+      <BasedBuilders />
     </>
   );
 }

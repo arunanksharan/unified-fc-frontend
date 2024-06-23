@@ -76,6 +76,7 @@ const config: Config = {
       backgroundImage: {
         gshero: "url('/glotsphere/bg-hero1.png')",
         lphero: "url('/landing-page/bg-hero.png')",
+        bbhero: "url('/basedbuilders/bg-hero.png')",
       },
     },
   },
