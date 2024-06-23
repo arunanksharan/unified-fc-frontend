@@ -58,7 +58,7 @@ export const authOptions: NextAuthOptions = {
           const verifyResponse = await appClient.verifySignInMessage({
             message: credentials?.message as string,
             signature: credentials?.signature as `0x${string}`,
-            domain: DOMAIN_EXAMPLE,
+            domain: DOMAIN_GLOBAL,
             // domain: 'localhost:3000',
             nonce: csrfToken,
           });
@@ -84,16 +84,19 @@ export const authOptions: NextAuthOptions = {
 
           const { nonce, signature } = generateApiKeyAuth();
 
-          const response = await fetch('http://localhost:5001/users/create', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-api-key': UNIFIED_BACKEND_API_KEY,
-              'x-nonce': nonce,
-              'x-signature': signature,
-            },
-            body: JSON.stringify(payload),
-          });
+          const response = await fetch(
+            'https://farcasterlabs.xyz/users/create',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': UNIFIED_BACKEND_API_KEY,
+                'x-nonce': nonce,
+                'x-signature': signature,
+              },
+              body: JSON.stringify(payload),
+            }
+          );
 
           console.log('After auth creating users', response);
           const data = await response.json();
